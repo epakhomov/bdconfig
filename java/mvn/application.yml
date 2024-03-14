@@ -8,6 +8,10 @@ detect:
   project.name: 'mvn'
   project.version.name: '1.0'
 
+  #------ADDITIONAL--MAVEN--OPTIONS------------------------------------------------------------------
+
+  #maven.build.command
+  
   #By default, Detect runs the mvn (or mvnw) command with two arguments: dependency:tree and -T1. 
   #You can use this property to insert one or more additional mvn command line arguments (goals, etc.) 
   #before the dependency:tree argument. For example: suppose you are running in bash on Linux, and want to 
@@ -17,8 +21,16 @@ detect:
   #Please note that Detect will omit any thread-specifying arguments in order to ensure the accuracy of 
   #the dependency tree.
 
-  #maven.build.command
+  #---------------------------------------------------------------------------------------------------
+
   #maven.path
+
+  #The path to the Maven executable (mvn or mvnw). If set, Detect will use the given Maven executable 
+  #instead of searching for one.
+
+  #---------------------------------------------------------------------------------------------------
+
+
   #maven.included.scopes
   #maven.excluded.scopes
 
