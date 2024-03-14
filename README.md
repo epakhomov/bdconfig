@@ -1,1 +1,1 @@
-The configuration patterns should be used as yaml files with Black Duck detect.Black Duck will look for a configuration application.yml in the current working directory, or a ./config subdirectory. If it exists, it will read property values from it.
+The configuration patterns should be used as yaml files with Black Duck detect. Black Duck will look for a configuration application.yml in the current working directory, or a ./config subdirectory. If it exists, it will read property values from it.
