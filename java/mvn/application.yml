@@ -29,10 +29,44 @@ detect:
   #instead of searching for one.
 
   #---------------------------------------------------------------------------------------------------
-
-
+  
   #maven.included.scopes
+
+  #A comma separated list of Maven scopes. Output will be limited to dependencies within these scopes
+  #(overridden by exclude).If set, Detect will include only dependencies of the given Maven scope. 
+  #This property accepts filename globbing-style wildcards. This property accepts filename globbing-style 
+  #wildcards. Refer to the Configuring Synopsys Detect > Property wildcard support page for more details.
+
+  #---------------------------------------------------------------------------------------------------
+
   #maven.excluded.scopes
+
+  #A comma separated list of Maven scopes. Output will be limited to dependencies outside these scopes (overrides include).
+  #If set, Detect will include only dependencies outside of the given Maven scope. This property accepts 
+  #filename globbing-style wildcards. Refer to the Configuring Synopsys Detect > Property wildcard support 
+  #page for more details.
+
+
+  #---------------------------------------------------------------------------------------------------
+  
+  #maven.included.modules
+
+  #A comma-separated list of Maven modules (subprojects) to include. As Detect parses the mvn dependency:
+  #tree output for dependencies, if this property is set, Detect will include only those Maven modules 
+  #specified via this property that are not excluded. Leaving this unset implies 'include all'. 
+  #Exclusion rules always win. This property accepts filename globbing-style wildcards. Refer to 
+  #the Configuring Synopsys Detect > Property wildcard support page for more details.
+
+  #---------------------------------------------------------------------------------------------------
+
+  #maven.excluded.modules
+
+  #A comma-separated list of Maven modules (subprojects) to exclude.
+  #As Detect parses the mvn dependency:tree output for dependencies, Detect will skip any Maven modules 
+  #specified via this property. This property accepts filename globbing-style wildcards. Refer to the 
+  #Configuring Synopsys Detect > Property wildcard support page for more details.
+
+  #------OTHER--DETECT--OPTIONS-------------------------------------------------------------------------
 
   #code.location.name: 'name'
   #blackduck.signature.scanner.snippet.matching: 'FULL_SNIPPET_MATCHING'
